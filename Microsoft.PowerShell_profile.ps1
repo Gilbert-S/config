@@ -1,5 +1,5 @@
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
-oh-my-posh init pwsh --config "C:\Repos\config\gilbert.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "C:\Repos\config\gilbert-tokyo.omp.json" | Invoke-Expression
 Import-Module -Name Terminal-Icons
 Import-Module PSReadLine
 
@@ -17,3 +17,6 @@ Set-Alias -name "awk" -value f_awk
 
 git config --global alias.gone "!git branch -vv | awk '/: gone]/{print `$1}'"
 git config --global alias.gonedelete "! git branch -d `$(git gone)"
+
+function f_runsd {& "E:\SwarmUI\launch-windows.bat"}
+Set-Alias -name "runsd" -value f_runsd
