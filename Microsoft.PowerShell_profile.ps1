@@ -3,6 +3,8 @@ oh-my-posh init pwsh --config "C:\Repos\config\gilbert-tokyo.omp.json" | Invoke-
 Import-Module -Name Terminal-Icons
 Import-Module PSReadLine
 
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
 function Set-WindowTitle {
   $host.UI.RawUI.WindowTitle = [string]::Join(" ", $args)
 }
